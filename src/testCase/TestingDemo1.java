@@ -1,21 +1,14 @@
 package testCase;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import utilities.ExcelUtilis;
 
-
-
-
-
 public class TestingDemo1 {
-
 	
-	static ExcelUtilis exc=new ExcelUtilis();
+ 	static ExcelUtilis exc=new ExcelUtilis();
 	 public static final String testData = "C:\\Users\\jakther\\Desktop\\jahed\\workspace\\DataDriven\\src\\testData\\TestData.xlsx";
 	 
     // public static final String File_TestData = "TestData.xlsx";Sheet1
@@ -24,12 +17,12 @@ public class TestingDemo1 {
 	public static void main(String[] args) throws Exception {
 		exc.setExcelFile(testData, "Sheet1");
 		Thread.sleep(2000);
-		driver=new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://test.salesforce.com");
+		//driver=new FirefoxDriver();
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.get("https://test.salesforce.com");
 		Thread.sleep(2000);
-		
-		for(int i=1;i<=4;i++){		
+		System.err.println(exc.getRowSize("Sheet1"));
+		/*for(int i=1;i<=4;i++){		
 		String userName=exc.getCellData(i, 1);
 		String password=exc.getCellData(i, 2);
 		
@@ -43,16 +36,16 @@ public class TestingDemo1 {
 		driver.findElement(By.xpath(".//*[@id='userNav-menuItems']/a[3]")).click();
 		Thread.sleep(3000);
 	
-		exc.setCellData(sandBox ,i, 4);
+		exc.setCellData(testData,sandBox ,i, 4);
 		System.out.println(userName);
 		System.out.println(password);
 		}
 		
-		//exc.setCellData("Salesforce", 3, 3);
-		
-		;
+		//exc.setCellData(testData,"Salesforce", 3, 3);
 		
 		
+		
+		*/
 		
 
 	}

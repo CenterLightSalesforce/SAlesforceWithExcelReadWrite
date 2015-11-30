@@ -70,7 +70,7 @@ public class ExcelUtilis {
 	// This method is to write in the Excel cell, Row num and Col num are the
 	// parameters
 
-	public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
+	public static void setCellData(String excelPath,String Result, int RowNum, int ColNum) throws Exception {
 
 		try {
 
@@ -93,7 +93,7 @@ public class ExcelUtilis {
 
 			// Constant variables Test Data path and Test Data file name
 
-			FileOutputStream fileOut = new FileOutputStream(Path_TestData + File_TestData);
+			FileOutputStream fileOut = new FileOutputStream(excelPath);
 
 			ExcelWBook.write(fileOut);
 
@@ -106,4 +106,13 @@ public class ExcelUtilis {
 			throw (e);
 
 		}
-	}}
+	}
+	
+public static int getRowSize(String sheet1){
+		
+	//int rowSize=ExcelWSheet.getLastRowNum()-ExcelWSheet.getFirstRowNum();
+	//int rowSize=ExcelWSheet.getLastRowNum();
+	int cou=ExcelWBook.getSheet(sheet1).getLastRowNum();
+	return cou;
+}
+}

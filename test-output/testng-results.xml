@@ -1,118 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="16" passed="15">
+<testng-results skipped="0" failed="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="49455" started-at="2015-11-25T18:06:00Z" finished-at="2015-11-25T18:06:49Z">
+  <suite name="Suite" duration-ms="49371" started-at="2015-11-30T16:05:45Z" finished-at="2015-11-30T16:06:35Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="49455" started-at="2015-11-25T18:06:00Z" finished-at="2015-11-25T18:06:49Z">
+    <test name="Test" duration-ms="49371" started-at="2015-11-30T16:05:45Z" finished-at="2015-11-30T16:06:35Z">
       <class name="testCase.IntegrateMemberAcWithLogin">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="openBrowser" is-config="true" duration-ms="11219" started-at="2015-11-25T13:05:48Z" finished-at="2015-11-25T13:06:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="loginIntoApplication()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="loginIntoApplication" duration-ms="9855" started-at="2015-11-25T13:06:21Z" finished-at="2015-11-25T13:06:31Z">
+        <test-method status="PASS" signature="loginIntoApplication()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="loginIntoApplication" duration-ms="9826" started-at="2015-11-30T11:06:06Z" finished-at="2015-11-30T11:06:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginIntoApplication -->
-        <test-method status="PASS" signature="navigateToAccountPage()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="navigateToAccountPage" duration-ms="6305" started-at="2015-11-25T13:06:31Z" finished-at="2015-11-25T13:06:37Z">
+        <test-method status="PASS" signature="navigateToAccountPage()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="navigateToAccountPage" duration-ms="6567" started-at="2015-11-30T11:06:16Z" finished-at="2015-11-30T11:06:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToAccountPage -->
-        <test-method status="PASS" signature="enterBlankDataIntoMemberAc()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="enterBlankDataIntoMemberAc" duration-ms="1420" started-at="2015-11-25T13:06:37Z" finished-at="2015-11-25T13:06:39Z">
+        <test-method status="PASS" signature="enterBlankDataIntoMemberAc()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterBlankDataIntoMemberAc" duration-ms="1425" started-at="2015-11-30T11:06:22Z" finished-at="2015-11-30T11:06:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterBlankDataIntoMemberAc -->
-        <test-method status="PASS" signature="enterInvalidSsn()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="enterInvalidSsn" duration-ms="2742" started-at="2015-11-25T13:06:39Z" finished-at="2015-11-25T13:06:42Z">
+        <test-method status="PASS" signature="enterInvalidSsn()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidSsn" duration-ms="3041" started-at="2015-11-30T11:06:24Z" finished-at="2015-11-30T11:06:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInvalidSsn -->
-        <test-method status="PASS" signature="enterInvalidDate()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="enterInvalidDate" duration-ms="1985" started-at="2015-11-25T13:06:42Z" finished-at="2015-11-25T13:06:44Z">
+        <test-method status="PASS" signature="enterInvalidDate()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidDate" duration-ms="1885" started-at="2015-11-30T11:06:27Z" finished-at="2015-11-30T11:06:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInvalidDate -->
-        <test-method status="PASS" signature="enterInvalidEmail()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="enterInvalidEmail" duration-ms="1841" started-at="2015-11-25T13:06:44Z" finished-at="2015-11-25T13:06:45Z">
+        <test-method status="PASS" signature="enterInvalidEmail()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidEmail" duration-ms="2000" started-at="2015-11-30T11:06:29Z" finished-at="2015-11-30T11:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInvalidEmail -->
-        <test-method status="PASS" signature="createAMemberAcWithValidData()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="createAMemberAcWithValidData" duration-ms="3588" started-at="2015-11-25T13:06:45Z" finished-at="2015-11-25T13:06:49Z">
+        <test-method status="PASS" signature="createAMemberAcWithValidData()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="createAMemberAcWithValidData" duration-ms="3747" started-at="2015-11-30T11:06:31Z" finished-at="2015-11-30T11:06:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAMemberAcWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@136f0f5]" name="tearDown" is-config="true" duration-ms="1266" started-at="2015-11-25T13:06:49Z" finished-at="2015-11-25T13:06:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
       </class> <!-- testCase.IntegrateMemberAcWithLogin -->
       <class name="testCase.TestCaseForLogin">
-        <test-method status="PASS" signature="verifyInvalidIDBlank()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="verifyInvalidIDBlank" duration-ms="1319" started-at="2015-11-25T13:06:00Z" finished-at="2015-11-25T13:06:01Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="openBrowser" is-config="true" duration-ms="13349" started-at="2015-11-30T11:05:32Z" finished-at="2015-11-30T11:05:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyInvalidIDBlank()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidIDBlank" duration-ms="1255" started-at="2015-11-30T11:05:45Z" finished-at="2015-11-30T11:05:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidIDBlank -->
-        <test-method status="PASS" signature="verifyInvalidID()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="verifyInvalidID" duration-ms="5652" started-at="2015-11-25T13:06:01Z" finished-at="2015-11-25T13:06:06Z">
+        <test-method status="PASS" signature="verifyInvalidID()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidID" duration-ms="5405" started-at="2015-11-30T11:05:46Z" finished-at="2015-11-30T11:05:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidID -->
-        <test-method status="PASS" signature="verifyInvalidPassword()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="verifyInvalidPassword" duration-ms="1245" started-at="2015-11-25T13:06:06Z" finished-at="2015-11-25T13:06:08Z">
+        <test-method status="PASS" signature="verifyInvalidPassword()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidPassword" duration-ms="901" started-at="2015-11-30T11:05:52Z" finished-at="2015-11-30T11:05:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidPassword -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="validLogin" duration-ms="812" started-at="2015-11-25T13:06:08Z" finished-at="2015-11-25T13:06:09Z">
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="validLogin" duration-ms="598" started-at="2015-11-30T11:05:53Z" finished-at="2015-11-30T11:05:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="verifyRemebarMeCheckBox()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="verifyRemebarMeCheckBox" duration-ms="1400" started-at="2015-11-25T13:06:09Z" finished-at="2015-11-25T13:06:10Z">
+        <test-method status="PASS" signature="verifyRemebarMeCheckBox()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyRemebarMeCheckBox" duration-ms="1382" started-at="2015-11-30T11:05:53Z" finished-at="2015-11-30T11:05:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRemebarMeCheckBox -->
-        <test-method status="PASS" signature="logIn()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="logIn" duration-ms="6399" started-at="2015-11-25T13:06:10Z" finished-at="2015-11-25T13:06:16Z">
+        <test-method status="PASS" signature="logIn()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logIn" duration-ms="6501" started-at="2015-11-30T11:05:55Z" finished-at="2015-11-30T11:06:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="verifyTitle" duration-ms="206" started-at="2015-11-25T13:06:16Z" finished-at="2015-11-25T13:06:17Z">
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyTitle" duration-ms="224" started-at="2015-11-30T11:06:01Z" finished-at="2015-11-30T11:06:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method status="FAIL" signature="navigateToAccountPage()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="navigateToAccountPage" duration-ms="17" started-at="2015-11-25T13:06:17Z" finished-at="2015-11-25T13:06:17Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at pageObject.NavigateToOtherPage.navigateToAccountCreatePage(NavigateToOtherPage.java:35)
-	at testCase.TestCaseForLogin.navigateToAccountPage(TestCaseForLogin.java:252)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToAccountPage -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:testCase.TestCaseForLogin@1f70c54]" name="logout" duration-ms="4644" started-at="2015-11-25T13:06:17Z" finished-at="2015-11-25T13:06:21Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logout" duration-ms="4583" started-at="2015-11-30T11:06:01Z" finished-at="2015-11-30T11:06:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="tearDown" is-config="true" duration-ms="1249" started-at="2015-11-30T11:06:35Z" finished-at="2015-11-30T11:06:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.TestCaseForLogin -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
