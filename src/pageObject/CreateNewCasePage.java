@@ -23,7 +23,7 @@ public class CreateNewCasePage {
 	private By priortyListbox = By.id("cas8");
 	private By caseOriginListbox = By.id("cas11");
 	private By typeListbox = By.id("cas5");
-	private By subTypeOriginListbox = By.id("00NF000000ColXK");
+	private By subTypeListbox = By.id("00NF000000ColXK");
 	
 	private By subjectTxtbox = By.id("cas14");
 	
@@ -99,9 +99,85 @@ public class CreateNewCasePage {
 			throw new Exception(fName);
 		}
 	}
-
 	
-
 	
+	
+	/*
+	 * For Select Status from List By Text
+	 * 
+	 * @Param String visible Text
+	 */
+	public void selectStatus(String status) {
+
+		AllMethod.selectTextFromComboByVisibleTextUseBy(statusListbox, status);
+	}
+	
+	
+	
+	/*
+	 * For Select Priorty from List By Text
+	 * 
+	 * @Param String visible Text
+	 */
+	public void selectPriortity(String priority) {
+
+		AllMethod.selectTextFromComboByVisibleTextUseBy(priortyListbox, priority);
+	}
+	
+	
+	/*
+	 * For Select Case Origin from List By Text
+	 * 
+	 * @Param String visible Text
+	 */
+	public void selectCaseOrigin(String caseOrigin) {
+
+		AllMethod.selectTextFromComboByVisibleTextUseBy(caseOriginListbox, caseOrigin);
+	}	
+
+	/*
+	 * For Select Case Type from List By Text
+	 * 
+	 * @Param String visible Text
+	 */
+	public void selectType(String caseType) {
+
+		AllMethod.selectTextFromComboByVisibleTextUseBy(typeListbox, caseType);
+	}
+	
+	
+	/*
+	 * For Select Case Sub Type from List By Text
+	 * 
+	 * @Param String visible Text
+	 */
+	public void selectSubType(String caseSubType) {
+
+		AllMethod.selectTextFromComboByVisibleTextUseBy(subTypeListbox, caseSubType);
+	}
+	
+	
+	
+	
+	// For Insert Text on Subject
+		public void enterTxtOnSubject(String subject) throws Exception {
+			driver.findElement(subjectTxtbox).sendKeys(subject);
+			if (subject == null) {
+				throw new Exception(subject);
+			}
+		}
+
+		
+		// For Insert Text on Internal Comments
+				public void enterTxtOnInternalComments(String InternalComments) throws Exception {
+					driver.findElement(internalCommentsTxtbox).sendKeys(InternalComments);
+					if (InternalComments == null) {
+						throw new Exception(InternalComments);
+					}
+				}
+		
+				public void checkOnAssignRuls() {
+					driver.findElement(assignRulesCheckbox).click();
+				}
 	
 }
