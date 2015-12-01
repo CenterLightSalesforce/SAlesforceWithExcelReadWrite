@@ -175,7 +175,7 @@ public class CreateNewCasePage {
 						throw new Exception(InternalComments);
 					}
 				}
-		
+				// For Check on Assign Using Active Assignment Rules
 				public void checkOnAssignRuls() {
 					driver.findElement(assignRulesCheckbox).click();
 				}
