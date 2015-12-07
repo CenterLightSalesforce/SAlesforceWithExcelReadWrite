@@ -5,8 +5,7 @@
     <classes>
       <class name="testCase.TestingVerifyAdvancedSearch">
         <methods>
-          <include name="searchingCase"/>
-          <include name="logIN"/>
+          <include name="verifyOpenCase"/>
         </methods>
       </class> <!-- testCase.TestingVerifyAdvancedSearch -->
     </classes>

@@ -1,89 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9203" started-at="2015-12-07T15:24:13Z" finished-at="2015-12-07T15:24:23Z">
+  <suite name="Default suite" duration-ms="16590" started-at="2015-12-07T17:32:50Z" finished-at="2015-12-07T17:33:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9203" started-at="2015-12-07T15:24:13Z" finished-at="2015-12-07T15:24:23Z">
+    <test name="Default test" duration-ms="16590" started-at="2015-12-07T17:32:50Z" finished-at="2015-12-07T17:33:07Z">
       <class name="testCase.TestingVerifyAdvancedSearch">
-        <test-method status="PASS" signature="openDriver()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@13fcdbd]" name="openDriver" duration-ms="7186" started-at="2015-12-07T10:24:13Z" finished-at="2015-12-07T10:24:21Z">
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@115b42e]" name="openDriver" duration-ms="7884" started-at="2015-12-07T12:32:51Z" finished-at="2015-12-07T12:32:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDriver -->
-        <test-method status="FAIL" signature="logIN()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@13fcdbd]" name="logIN" duration-ms="2000" started-at="2015-12-07T10:24:21Z" finished-at="2015-12-07T10:24:23Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at pageObject.SignInPage.validLogin(SignInPage.java:86)
-	at testCase.TestingVerifyAdvancedSearch.logIN(TestingVerifyAdvancedSearch.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="logIN()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@115b42e]" name="logIN" duration-ms="4456" started-at="2015-12-07T12:32:58Z" finished-at="2015-12-07T12:33:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIN -->
-        <test-method status="FAIL" signature="searchingCase()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@13fcdbd]" name="searchingCase" duration-ms="1" started-at="2015-12-07T10:24:23Z" finished-at="2015-12-07T10:24:23Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at pageObject.CommonObjects.switchToFrame(CommonObjects.java:30)
-	at pageObject.CommonObjects.insertTxtOnSearchTxtBoxAndClickGoButton(CommonObjects.java:108)
-	at testCase.TestingVerifyAdvancedSearch.searchingCase(TestingVerifyAdvancedSearch.java:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="searchingCase()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@115b42e]" name="searchingCase" duration-ms="2184" started-at="2015-12-07T12:33:03Z" finished-at="2015-12-07T12:33:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchingCase -->
+        <test-method status="PASS" signature="verifyOpenCase()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@115b42e]" name="verifyOpenCase" duration-ms="2051" started-at="2015-12-07T12:33:05Z" finished-at="2015-12-07T12:33:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOpenCase -->
       </class> <!-- testCase.TestingVerifyAdvancedSearch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
