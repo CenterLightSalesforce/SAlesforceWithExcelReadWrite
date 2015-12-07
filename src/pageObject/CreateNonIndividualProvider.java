@@ -12,8 +12,6 @@ public class CreateNonIndividualProvider {
 	private By saveButton = By.xpath(".//*[@id='topButtonRow']/input[1]");
 	private By saveAndNewButton = By.xpath(".//*[@id='topButtonRow']/input[2]");
 	private By canCelButton = By.xpath(".//*[@id='topButtonRow']/input[3]");
-	
-	
 	private By accNameTxtbox = By.id("acc2");
 	private By pNameTxtbox = By.id("00NF000000ColU9");
 	private By fNameTxtbox = By.id("00NF000000ColTt");

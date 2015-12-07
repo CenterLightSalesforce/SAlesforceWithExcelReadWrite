@@ -35,12 +35,12 @@ public class AllMethod extends StartUp {
 	
 	public static void validLogin() throws InterruptedException  {
 
-		AllMethod.useSendkeys("id", "username",validID);
+		useSendkeys("id", "username",validID);
 
-		AllMethod.useSendkeys("id", "password",
+		useSendkeys("id", "password",
 				validPassword);
 		Thread.sleep(2000);
-		AllMethod.clickButton("id", "Login","click");
+		clickButton("id", "Login","click");
 		Thread.sleep(2000);
 	}
 	

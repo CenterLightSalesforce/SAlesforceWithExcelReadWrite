@@ -1,83 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="15" passed="15">
+<testng-results skipped="0" failed="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="49371" started-at="2015-11-30T16:05:45Z" finished-at="2015-11-30T16:06:35Z">
+  <suite name="Default suite" duration-ms="9203" started-at="2015-12-07T15:24:13Z" finished-at="2015-12-07T15:24:23Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="49371" started-at="2015-11-30T16:05:45Z" finished-at="2015-11-30T16:06:35Z">
-      <class name="testCase.IntegrateMemberAcWithLogin">
-        <test-method status="PASS" signature="loginIntoApplication()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="loginIntoApplication" duration-ms="9826" started-at="2015-11-30T11:06:06Z" finished-at="2015-11-30T11:06:16Z">
+    <test name="Default test" duration-ms="9203" started-at="2015-12-07T15:24:13Z" finished-at="2015-12-07T15:24:23Z">
+      <class name="testCase.TestingVerifyAdvancedSearch">
+        <test-method status="PASS" signature="openDriver()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@13fcdbd]" name="openDriver" duration-ms="7186" started-at="2015-12-07T10:24:13Z" finished-at="2015-12-07T10:24:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginIntoApplication -->
-        <test-method status="PASS" signature="navigateToAccountPage()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="navigateToAccountPage" duration-ms="6567" started-at="2015-11-30T11:06:16Z" finished-at="2015-11-30T11:06:22Z">
+        </test-method> <!-- openDriver -->
+        <test-method status="FAIL" signature="logIN()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@13fcdbd]" name="logIN" duration-ms="2000" started-at="2015-12-07T10:24:21Z" finished-at="2015-12-07T10:24:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at pageObject.SignInPage.validLogin(SignInPage.java:86)
+	at testCase.TestingVerifyAdvancedSearch.logIN(TestingVerifyAdvancedSearch.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToAccountPage -->
-        <test-method status="PASS" signature="enterBlankDataIntoMemberAc()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterBlankDataIntoMemberAc" duration-ms="1425" started-at="2015-11-30T11:06:22Z" finished-at="2015-11-30T11:06:24Z">
+        </test-method> <!-- logIN -->
+        <test-method status="FAIL" signature="searchingCase()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@13fcdbd]" name="searchingCase" duration-ms="1" started-at="2015-12-07T10:24:23Z" finished-at="2015-12-07T10:24:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at pageObject.CommonObjects.switchToFrame(CommonObjects.java:30)
+	at pageObject.CommonObjects.insertTxtOnSearchTxtBoxAndClickGoButton(CommonObjects.java:108)
+	at testCase.TestingVerifyAdvancedSearch.searchingCase(TestingVerifyAdvancedSearch.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterBlankDataIntoMemberAc -->
-        <test-method status="PASS" signature="enterInvalidSsn()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidSsn" duration-ms="3041" started-at="2015-11-30T11:06:24Z" finished-at="2015-11-30T11:06:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterInvalidSsn -->
-        <test-method status="PASS" signature="enterInvalidDate()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidDate" duration-ms="1885" started-at="2015-11-30T11:06:27Z" finished-at="2015-11-30T11:06:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterInvalidDate -->
-        <test-method status="PASS" signature="enterInvalidEmail()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidEmail" duration-ms="2000" started-at="2015-11-30T11:06:29Z" finished-at="2015-11-30T11:06:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterInvalidEmail -->
-        <test-method status="PASS" signature="createAMemberAcWithValidData()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="createAMemberAcWithValidData" duration-ms="3747" started-at="2015-11-30T11:06:31Z" finished-at="2015-11-30T11:06:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createAMemberAcWithValidData -->
-      </class> <!-- testCase.IntegrateMemberAcWithLogin -->
-      <class name="testCase.TestCaseForLogin">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="openBrowser" is-config="true" duration-ms="13349" started-at="2015-11-30T11:05:32Z" finished-at="2015-11-30T11:05:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyInvalidIDBlank()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidIDBlank" duration-ms="1255" started-at="2015-11-30T11:05:45Z" finished-at="2015-11-30T11:05:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidIDBlank -->
-        <test-method status="PASS" signature="verifyInvalidID()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidID" duration-ms="5405" started-at="2015-11-30T11:05:46Z" finished-at="2015-11-30T11:05:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidID -->
-        <test-method status="PASS" signature="verifyInvalidPassword()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidPassword" duration-ms="901" started-at="2015-11-30T11:05:52Z" finished-at="2015-11-30T11:05:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidPassword -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="validLogin" duration-ms="598" started-at="2015-11-30T11:05:53Z" finished-at="2015-11-30T11:05:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="verifyRemebarMeCheckBox()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyRemebarMeCheckBox" duration-ms="1382" started-at="2015-11-30T11:05:53Z" finished-at="2015-11-30T11:05:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRemebarMeCheckBox -->
-        <test-method status="PASS" signature="logIn()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logIn" duration-ms="6501" started-at="2015-11-30T11:05:55Z" finished-at="2015-11-30T11:06:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyTitle" duration-ms="224" started-at="2015-11-30T11:06:01Z" finished-at="2015-11-30T11:06:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logout" duration-ms="4583" started-at="2015-11-30T11:06:01Z" finished-at="2015-11-30T11:06:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="tearDown" is-config="true" duration-ms="1249" started-at="2015-11-30T11:06:35Z" finished-at="2015-11-30T11:06:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCase.TestCaseForLogin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- searchingCase -->
+      </class> <!-- testCase.TestingVerifyAdvancedSearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

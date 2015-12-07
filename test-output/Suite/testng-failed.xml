@@ -3,17 +3,30 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="testCase.IntegrateMemberAcWithLogin">
-        <methods>
-          <include name="tearDown"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- testCase.IntegrateMemberAcWithLogin -->
       <class name="testCase.TestCaseForLogin">
         <methods>
-          <include name="navigateToAccountPage"/>
+          <include name="logIn"/>
+          <include name="logout"/>
+          <include name="validLogin"/>
+          <include name="verifyInvalidID"/>
+          <include name="verifyInvalidPassword"/>
+          <include name="verifyRemebarMeCheckBox"/>
+          <include name="verifyInvalidIDBlank"/>
+          <include name="verifyTitle"/>
+          <include name="openBrowser"/>
         </methods>
       </class> <!-- testCase.TestCaseForLogin -->
+      <class name="testCase.IntegrateMemberAcWithLogin">
+        <methods>
+          <include name="enterBlankDataIntoMemberAc"/>
+          <include name="enterInvalidDate"/>
+          <include name="enterInvalidSsn"/>
+          <include name="navigateToAccountPage"/>
+          <include name="loginIntoApplication"/>
+          <include name="enterInvalidEmail"/>
+          <include name="createAMemberAcWithValidData"/>
+        </methods>
+      </class> <!-- testCase.IntegrateMemberAcWithLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

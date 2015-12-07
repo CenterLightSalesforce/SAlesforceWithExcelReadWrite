@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCase.IntegrateMemberAcWithLofin">
+      <class name="testCase.TestingVerifyAdvancedSearch">
         <methods>
-          <include name="navigateToAccountPage"/>
-          <include name="tearDown"/>
-          <include name="openBrowser"/>
+          <include name="searchingCase"/>
+          <include name="logIN"/>
         </methods>
-      </class> <!-- testCase.IntegrateMemberAcWithLofin -->
+      </class> <!-- testCase.TestingVerifyAdvancedSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
