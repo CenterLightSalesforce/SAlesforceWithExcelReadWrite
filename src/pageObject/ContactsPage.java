@@ -20,13 +20,11 @@ public class ContactsPage {
 	private By lNameTxtbox = By.id("name_lastcon2");
 	private By phoneTxtbox = By.id("con10");
 	private By suffixTxtbox = By.id("name_suffixcon2");
-	
 	private By addLine1Txtbox = By.id("00NF000000D2YGa");
 	private By addLine2Txtbox = By.id("00NF000000D2YGb");
 	private By cityTxtbox = By.id("00NF000000D2YGZ");
 	private By stateListbox = By.id("00NF000000D2YGc");
 	private By zipTxtbox = By.id("00NF000000D2YGd");
-	
 	private By mAddLine1Txtbox = By.id("00NF000000D2YGf");
 	private By mAddLine2Txtbox = By.id("00NF000000D2YGg");
 	private By mCityTxtbox = By.id("00NF000000D2YGe");
@@ -39,8 +37,6 @@ public class ContactsPage {
 	private By appsWitnessCheckbox = By.id("00NL0000003ebGc");
 	private By relationToMemberListbox = By.id("00NF000000D4Ens");
 
-		
-	
 	// This is Constructor
 	public ContactsPage(WebDriver driver) {
 		this.driver = driver;
@@ -91,44 +87,40 @@ public class ContactsPage {
 	public void checkOnApplicationWitness() {
 		driver.findElement(appsWitnessCheckbox).click();
 	}
-	
+
 	// For Select Relationship To Member
 	public void selectRelation(String relation) {
-       try{
-		AllMethod.selectTextFromComboByVisibleTextUseBy(relationToMemberListbox, relation);
-	      }catch(NoSuchElementException a){
-	    	  System.out.println("Element Not Found");
-	      }
+		try {
+			AllMethod.selectTextFromComboByVisibleTextUseBy(relationToMemberListbox, relation);
+		} catch (NoSuchElementException a) {
+			System.out.println("Element Not Found");
+		}
 	}
-	
-	
-	
-	//Enter Contact Information
-			public void enterContact(String accName,String fName,String lName,String phone){
-				AllMethod.useSendkeys("id","con4",accName);
-				AllMethod.useSendkeys("id","name_firstcon2",fName);
-				AllMethod.useSendkeys("id","name_lastcon2",lName);
-				AllMethod.useSendkeys("id","con10",phone);
-			}
-	
-	//Enter Address
-	public void enterAddress(String add,String city,String state,String zip){
-		AllMethod.useSendkeys("id","00NF000000D2YGa",add);
-		AllMethod.useSendkeys("id","00NF000000D2YGZ",city);
+
+	// Enter Contact Information
+	public void enterContact(String accName, String fName, String lName, String phone) {
+		AllMethod.useSendkeys("id", "con4", accName);
+		AllMethod.useSendkeys("id", "name_firstcon2", fName);
+		AllMethod.useSendkeys("id", "name_lastcon2", lName);
+		AllMethod.useSendkeys("id", "con10", phone);
+	}
+
+	// Enter Address
+	public void enterAddress(String add, String city, String state, String zip) {
+		AllMethod.useSendkeys("id", "00NF000000D2YGa", add);
+		AllMethod.useSendkeys("id", "00NF000000D2YGZ", city);
 		AllMethod.selectTextFromComboByVisibleTextUseBy(stateListbox, state);
-		AllMethod.useSendkeys("id","00NF000000D2YGd",zip);
-		
+		AllMethod.useSendkeys("id", "00NF000000D2YGd", zip);
+
 	}
-	
-	//Enter Mailing Address
-			public void enterMailingAddress(String add,String city,String state,String zip){
-				AllMethod.useSendkeys("id","00NF000000D2YGf",add);
-				AllMethod.useSendkeys("id","00NF000000D2YGe",city);
-				AllMethod.selectTextFromComboByVisibleTextUseBy(mStateListbox, state);
-				AllMethod.useSendkeys("id","00NF000000D2YGi",zip);
-				
-			}
-		
-	
+
+	// Enter Mailing Address
+	public void enterMailingAddress(String add, String city, String state, String zip) {
+		AllMethod.useSendkeys("id", "00NF000000D2YGf", add);
+		AllMethod.useSendkeys("id", "00NF000000D2YGe", city);
+		AllMethod.selectTextFromComboByVisibleTextUseBy(mStateListbox, state);
+		AllMethod.useSendkeys("id", "00NF000000D2YGi", zip);
+
+	}
 
 }
