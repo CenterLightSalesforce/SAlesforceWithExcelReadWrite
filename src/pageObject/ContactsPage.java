@@ -3,7 +3,9 @@ package pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import junit.framework.Assert;
 import utilities.AllMethod;
 
 public class ContactsPage {
@@ -36,7 +38,10 @@ public class ContactsPage {
 	private By healthcareProxyCheckbox = By.id("00NF000000D2YGR");
 	private By appsWitnessCheckbox = By.id("00NL0000003ebGc");
 	private By relationToMemberListbox = By.id("00NF000000D4Ens");
-
+	private By newButton = By.xpath(".//*[@id='hotlist']/table/tbody/tr/td[2]/input");
+	private By recordTypeComboBox = By.xpath(".//*[@id='p3']");
+	private By continueButton = By.xpath(".//*[@id='bottomButtonRow']/input[1]");
+	private By errorTxt = By.xpath(".//*[@id='errorDiv_ep']");
 	// This is Constructor
 	public ContactsPage(WebDriver driver) {
 		this.driver = driver;
@@ -122,5 +127,25 @@ public class ContactsPage {
 		AllMethod.useSendkeys("id", "00NF000000D2YGi", zip);
 
 	}
+	
+	// For Click New Button on Contact Home Page
+	public void clickToNewButton(){
+		driver.findElement(newButton).click();
+	}
+	public void clickToContinueButton(){
+		driver.findElement(continueButton).click();
+	}
+	
+	//Select data into  Combo box  from Select Contact Record Type page
+	public void selectRecordTypeFromComboBox(String recTypedata){
+		AllMethod.selectTextFromComboByVisibleTextUseBy(recordTypeComboBox, recTypedata);
+	}
+	
+	public String getErrorTxt(){
+		WebElement error=driver.findElement(errorTxt);
+		return error.getText();
+	
+	}
+	
 
 }

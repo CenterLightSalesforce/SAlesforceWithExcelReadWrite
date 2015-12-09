@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCase.TestingVerifyAdvancedSearch">
+      <class name="testCase.TestCaseForCreateNewContact">
         <methods>
-          <include name="verifyOpenCase"/>
+          <include name="verifyErrorMsgOnBlankSubmit"/>
+          <include name="tearup"/>
         </methods>
-      </class> <!-- testCase.TestingVerifyAdvancedSearch -->
+      </class> <!-- testCase.TestCaseForCreateNewContact -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

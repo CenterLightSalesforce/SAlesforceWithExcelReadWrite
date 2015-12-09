@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16126" started-at="2015-12-07T17:42:13Z" finished-at="2015-12-07T17:42:29Z">
+  <suite name="Default suite" duration-ms="16928" started-at="2015-12-09T17:34:11Z" finished-at="2015-12-09T17:34:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16126" started-at="2015-12-07T17:42:13Z" finished-at="2015-12-07T17:42:29Z">
-      <class name="testCase.TestingVerifyAdvancedSearch">
-        <test-method status="PASS" signature="tearup()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@b2c100]" name="tearup" is-config="true" duration-ms="10018" started-at="2015-12-07T12:42:13Z" finished-at="2015-12-07T12:42:23Z">
+    <test name="Default test" duration-ms="16928" started-at="2015-12-09T17:34:11Z" finished-at="2015-12-09T17:34:28Z">
+      <class name="testCase.TestCaseForCreateNewContact">
+        <test-method status="PASS" signature="tearup()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="tearup" is-config="true" duration-ms="8783" started-at="2015-12-09T12:34:11Z" finished-at="2015-12-09T12:34:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearup -->
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@b2c100]" name="openApplication" duration-ms="672" started-at="2015-12-07T12:42:23Z" finished-at="2015-12-07T12:42:24Z">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="openApplication" duration-ms="1061" started-at="2015-12-09T12:34:20Z" finished-at="2015-12-09T12:34:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="logIN()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@b2c100]" name="logIN" duration-ms="383" started-at="2015-12-07T12:42:24Z" finished-at="2015-12-07T12:42:24Z">
+        <test-method status="PASS" signature="navigateToContactsPage()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="navigateToContactsPage" duration-ms="5151" started-at="2015-12-09T12:34:21Z" finished-at="2015-12-09T12:34:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logIN -->
-        <test-method status="PASS" signature="searchingCase()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@b2c100]" name="searchingCase" duration-ms="3784" started-at="2015-12-07T12:42:24Z" finished-at="2015-12-07T12:42:28Z">
+        </test-method> <!-- navigateToContactsPage -->
+        <test-method status="PASS" signature="verifyErrorMsgOnBlankSubmit()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="verifyErrorMsgOnBlankSubmit" duration-ms="1913" started-at="2015-12-09T12:34:26Z" finished-at="2015-12-09T12:34:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchingCase -->
-        <test-method status="PASS" signature="verifyOpenCase()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@b2c100]" name="verifyOpenCase" duration-ms="1238" started-at="2015-12-07T12:42:28Z" finished-at="2015-12-07T12:42:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyOpenCase -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.TestingVerifyAdvancedSearch@b2c100]" name="tearDown" is-config="true" duration-ms="10" started-at="2015-12-07T12:42:29Z" finished-at="2015-12-07T12:42:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCase.TestingVerifyAdvancedSearch -->
+        </test-method> <!-- verifyErrorMsgOnBlankSubmit -->
+      </class> <!-- testCase.TestCaseForCreateNewContact -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

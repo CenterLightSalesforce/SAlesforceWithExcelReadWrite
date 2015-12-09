@@ -5,12 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CommonObjects {
-	private WebDriver driver;
+	private static WebDriver driver;
 	private By homeTab = By.id("home_Tab");
 	private By accountsTab = By.id("Account_Tab");
 	private By caseTab = By.id("Case_Tab");
 	private By reportTab = By.id("report_Tab");
-	private By contractTab = By.id("Contract_Tab");
+	
+	private By contactTab = By.xpath(".//*[@id='Contact_Tab']/a");
+	private static By contractTab = By.id("Contract_Tab");
 	private By plusTab = By.id("AllTab_Tab");
 	private By setUpLink = By.id("setupLink");
 	private By userNaviArrow = By.id("userNavButton");
@@ -66,13 +68,25 @@ public class CommonObjects {
 	public void clickReportTab() {
 		driver.findElement(reportTab).click();
 	}
+	
+	
+	// For Contact Tab
+		public By getContactTab() {
+			return contactTab;
+		}
+
+		public void clickContactTab() {
+			driver.findElement(contactTab).click();
+		}
+	
+	
 
 	// For Contract Tab
 	public By getContractTab() {
 		return contractTab;
 	}
 
-	public void clickContractTab() {
+	static public void clickContractTab() {
 		driver.findElement(contractTab).click();
 	}
 
