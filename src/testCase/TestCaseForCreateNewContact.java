@@ -1,5 +1,8 @@
 package testCase;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -59,14 +62,49 @@ public class TestCaseForCreateNewContact {
 		Thread.sleep(2000);
 
 	}
-	
+		
 	@Test(priority=3)
-	public void createANewContact() throws InterruptedException{
+	public void createANewContact() throws InterruptedException, AWTException{
 		ContactsPage contact = new ContactsPage(driver);
-		contact.accountNameImportFromLookup();
+		String mainwindow=driver.getWindowHandle();
+		
+		
+		contact.clickToAccountNameLookUp();
+		
+		for(String popup :driver.getWindowHandles()) //iterating on child windows
+	    {
+			Thread.sleep(2000);
+	    driver.switchTo().window(popup);
+	    System.out.println("Popup values: "+popup);
+	    // Perform any operations on child window
+	    WebElement lookUpframe=driver.findElement(By.id("resultsFrame"));
+		driver.switchTo().frame(lookUpframe);
+	    driver.findElement(By.xpath(".//*[@id='Account_body']/table/tbody/tr[2]/th/a")).click();
+	    }
+		driver.switchTo().window(mainwindow);
+		
+		
+		/*String txt;
 		Thread.sleep(2000);
+		driver.switchTo().activeElement();
+		driver.manage().window().maximize();
+		Robot rr =new Robot();
+		for(int i=1;i<25;i++){
+		rr.keyPress(KeyEvent.VK_TAB);
+		rr.keyRelease(KeyEvent.VK_TAB);
+		rr.delay(500);
+		txt=driver.switchTo().activeElement().getText();
+		if(txt=="Sharmeen ahmed"){
+			driver.switchTo().activeElement().click();
+			break;
+		       }		    
+				
+		}
+			
+		
+		
 		contact.enterContact("Shiam", "huss","2153214214");
-		contact.clickSaveButton();
+		contact.clickSaveButton();*/
 	}
 
 }

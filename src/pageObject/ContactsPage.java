@@ -1,5 +1,7 @@
 package pageObject;
 
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -157,11 +159,15 @@ public class ContactsPage {
 	
 	}
 	
-	public void accountNameImportFromLookup(){
+	public void accountNameImportFromLookup() throws InterruptedException{
 		clickToAccountNameLookUp();
+		
 		WebElement lookUpframe=driver.findElement(By.id("resultsFrame"));
 		driver.switchTo().frame(lookUpframe);
+		
 		driver.findElement(By.xpath(".//*[@id='Account_body']/table/tbody/tr[2]/th/a")).click();
+		
+		
 		driver.switchTo().activeElement();
 	}
 
