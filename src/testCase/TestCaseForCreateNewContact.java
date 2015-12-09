@@ -56,7 +56,17 @@ public class TestCaseForCreateNewContact {
 		
 		//Assert.assertEquals(contact.getErrorTxt(),errorMsg);
 		Assert.assertEquals(contact.getErrorTxt(), errorMsg, "Didnt Match");
+		Thread.sleep(2000);
 
+	}
+	
+	@Test(priority=3)
+	public void createANewContact() throws InterruptedException{
+		ContactsPage contact = new ContactsPage(driver);
+		contact.accountNameImportFromLookup();
+		Thread.sleep(2000);
+		contact.enterContact("Shiam", "huss","2153214214");
+		contact.clickSaveButton();
 	}
 
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="testCase.TestCaseForCreateNewContact">
         <methods>
-          <include name="verifyErrorMsgOnBlankSubmit"/>
+          <include name="createANewContact"/>
           <include name="tearup"/>
         </methods>
       </class> <!-- testCase.TestCaseForCreateNewContact -->

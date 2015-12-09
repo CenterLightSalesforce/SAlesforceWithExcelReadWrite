@@ -42,6 +42,7 @@ public class ContactsPage {
 	private By recordTypeComboBox = By.xpath(".//*[@id='p3']");
 	private By continueButton = By.xpath(".//*[@id='bottomButtonRow']/input[1]");
 	private By errorTxt = By.xpath(".//*[@id='errorDiv_ep']");
+	private By accountNameLookUp = By.xpath(".//*[@id='con4_lkwgt']/img");
 	// This is Constructor
 	public ContactsPage(WebDriver driver) {
 		this.driver = driver;
@@ -103,11 +104,17 @@ public class ContactsPage {
 	}
 
 	// Enter Contact Information
-	public void enterContact(String accName, String fName, String lName, String phone) {
-		AllMethod.useSendkeys("id", "con4", accName);
-		AllMethod.useSendkeys("id", "name_firstcon2", fName);
-		AllMethod.useSendkeys("id", "name_lastcon2", lName);
-		AllMethod.useSendkeys("id", "con10", phone);
+	public void enterContact( String fName, String lName, String phone) {
+		//AllMethod.useSendkeys("id", "con4", accName);
+		//AllMethod.useSendkeys("id", "name_firstcon2", fName);
+		//AllMethod.useSendkeys("id", "name_lastcon2", lName);
+		//AllMethod.useSendkeys("id", "con10", phone);
+		
+	//	driver.findElement(accNameTxtbox).sendKeys(accName);
+		driver.findElement(fNameTxtbox).sendKeys(fName);
+		driver.findElement(lNameTxtbox).sendKeys(lName);
+		driver.findElement(phoneTxtbox).sendKeys(phone);
+		
 	}
 
 	// Enter Address
@@ -135,6 +142,9 @@ public class ContactsPage {
 	public void clickToContinueButton(){
 		driver.findElement(continueButton).click();
 	}
+	public void clickToAccountNameLookUp(){
+		driver.findElement(accountNameLookUp).click();
+	}
 	
 	//Select data into  Combo box  from Select Contact Record Type page
 	public void selectRecordTypeFromComboBox(String recTypedata){
@@ -147,5 +157,12 @@ public class ContactsPage {
 	
 	}
 	
+	public void accountNameImportFromLookup(){
+		clickToAccountNameLookUp();
+		WebElement lookUpframe=driver.findElement(By.id("resultsFrame"));
+		driver.switchTo().frame(lookUpframe);
+		driver.findElement(By.xpath(".//*[@id='Account_body']/table/tbody/tr[2]/th/a")).click();
+		driver.switchTo().activeElement();
+	}
 
 }
