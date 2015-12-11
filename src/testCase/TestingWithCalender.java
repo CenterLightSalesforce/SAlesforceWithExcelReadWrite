@@ -54,52 +54,86 @@ public class TestingWithCalender {
 		
 		driver.get("http://www.6pm.com/");
 		Thread.sleep(2000);
+		int totalItem=0;
+		
 		driver.findElement(By.xpath(".//*[@id='hpSideCol']/a[2]")).click();
 		Thread.sleep(2000);
+		String itemF=driver.findElement(By.xpath("//*[@id='FCTzc2Select']/a[8]")).getText();
+		String [] da=itemF.split("\\(");
+		String itemFound[]=da[1].split("\\)");
+		System.out.println(itemFound[0]);
 		
-		driver.findElement(By.xpath("//*[@id='FCTzc2Select']/a[8]")).click();
+				driver.findElement(By.xpath("//*[@id='FCTzc2Select']/a[8]")).click();
 		Thread.sleep(2000);
-		
-		boolean lop=true;
-		
+		List<WebElement> item=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+		totalItem=item.size();
+		//boolean lop=true;
+		driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[4]")).click();
+		Thread.sleep(2000);
+		item=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+		totalItem=totalItem+item.size();
+		driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]")).click();
+		Thread.sleep(2000);
+		item=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+		totalItem=totalItem+item.size();
+		driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]")).click();
+		Thread.sleep(2000);
+		item=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+		totalItem=totalItem+item.size();
+		System.out.println(totalItem);
+		String compare=""+totalItem;
+		if(itemFound[0].equals(compare)){
+			System.out.println("Total item Match");
+		}else{
+			System.out.println("Total item UnMatch");
+		}
 		/*driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[4]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]")).click();
 		Thread.sleep(2000);*/
-		
+		//int totalItem=0;
 		//List<WebElement> list1=driver.findElements(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]"));
 		//System.out.println(list1.size());
-		List<WebElement> list=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
-		int totalItem=list.size();
+		/*List<WebElement> item=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+		int total=item.size();
+		Thread.sleep(2000);
+		System.out.println("1st page Item Count item on the 1st Page"+totalItem);
 		driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[4]")).click();
 		Thread.sleep(2000);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		WebElement navi;
-		WebElement list1;
-	    
-		
-		do
-	    {
-	    	navi=driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]"));
-			list=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
-	    	list1=driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]"));
-        	totalItem=totalItem+list.size();
-        
-	    	  //Thread.sleep(2000);
-		        if(list1.isDisplayed()){
+		List<WebElement> list1;
+		*/
+	/*	
+		do   {
+	    	
+		//list=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+	    	
+        //	totalItem=totalItem+list.size();
+	    	List<WebElement>list=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
+	    	totalItem=totalItem+list.size();
+	    	navi=driver.findElement(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[4]"));
+	    	list1=driver.findElements(By.xpath(".//*[@id='resultWrap']/div[1]/div[2]/a[5]"));
+	    	  Thread.sleep(2000);
+		        if(list1.size()>0){
+		        	
+		        	list=driver.findElements(By.xpath(".//*[@id='searchResults']/a"));
 		        	navi.click();
 		    	    Thread.sleep(2000);
-		    	    System.out.println(totalItem);
+		    	    System.out.println("2nd page item count:on 2nd page :"+totalItem);
 		        }else{
 		      
 		    	  lop=false;
 		        }
+		        
 		}while(lop);
 	    
-		System.out.println(totalItem);
 		
+		int finalitem=total+totalItem;
+		System.out.println("Total Item Ccount:"+finalitem);
+		*/
 		/*driver.findElement(By.id(“id of the link/button which opens new window”)).click();
 		//wait till two windows are not opened
 		waitForNumberofWindowsToEqual(2);//this method is for wait
