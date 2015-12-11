@@ -3,6 +3,7 @@ package testCase;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -67,17 +68,21 @@ public class TestCaseForCreateNewContact {
 	public void createANewContact() throws InterruptedException, AWTException{
 		ContactsPage contact = new ContactsPage(driver);
 		String mainwindow=driver.getWindowHandle();
-		
+		Set <String> handles=driver.getWindowHandles(); 
 		
 		contact.clickToAccountNameLookUp();
 		
-		for(String popup :driver.getWindowHandles()) //iterating on child windows
+		for(String popup :handles) //iterating on child windows
 	    {
 			Thread.sleep(2000);
-	    driver.switchTo().window(popup);
-	    System.out.println("Popup values: "+popup);
+	    
+	    //System.out.println("Popup values: "+popup);
 	    // Perform any operations on child window
-	    WebElement lookUpframe=driver.findElement(By.id("resultsFrame"));
+	    if(!popup.equals(mainwindow)){}
+	         driver.switchTo().window(popup);	
+			
+			
+			WebElement lookUpframe=driver.findElement(By.id("resultsFrame"));
 		driver.switchTo().frame(lookUpframe);
 	    driver.findElement(By.xpath(".//*[@id='Account_body']/table/tbody/tr[2]/th/a")).click();
 	    }
