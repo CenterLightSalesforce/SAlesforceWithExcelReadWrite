@@ -30,6 +30,17 @@ public class TestingWithCalender {
 
 		driver.findElement(By.xpath(".//*[@id='Case_Tab']/a")).click();
 		Thread.sleep(3000);
+		
+		
+		List<WebElement> totalLinks = driver.findElements(By.tagName("a"));
+		System.out.println("Total "+totalLinks.size()+" Links are Present on this Page");
+		for(int h=0;h<totalLinks.size();h++){
+			WebElement ele =totalLinks.get(h);
+			System.out.println(ele.getText());
+			
+		}
+		
+		
 		List<WebElement> openCase = driver
 				.findElements(By.xpath(".//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table/tbody/tr"));
 		System.out.println(openCase.size());
@@ -42,12 +53,10 @@ public class TestingWithCalender {
 						.findElement(By.xpath(
 								".//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table/tbody/tr[" + n + "]/td[1]/a"))
 						.getText().toString();
-				
-				
+							
 				String caseNumber = driver.findElement(By.xpath(".//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table/tbody/tr["+n+"]/th/a")).getText();
 				String dateOpen = driver.findElement(By.xpath(".//*[@id='bodyCell']/div[3]/div[1]/div/div[2]/table/tbody/tr["+n+"]/td[4]")).getText();
-				
-				
+							
 				if (caseAccName2.equalsIgnoreCase(caseAccNameEx)) {
 					countCase = (countCase + 1);
 					System.out.println("Matching Case Number:"+caseNumber+" case opened "+dateOpen);
