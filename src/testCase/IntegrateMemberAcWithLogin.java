@@ -23,10 +23,10 @@ public class IntegrateMemberAcWithLogin extends StartUp{
 	@Test(priority=0)
 	public void loginIntoApplication() throws InterruptedException{
 		extent.startTest("TC02.1", "Valid LogIn");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		//sign.validLogin();
 		AllMethod.validLogin();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		extent.log(LogStatus.INFO, "Verify Valid Login","View details below:", ScreenShot.captureScreen(driver,"valid Login"));
 		extent.endTest();
 	}
@@ -36,15 +36,15 @@ public class IntegrateMemberAcWithLogin extends StartUp{
 	public void navigateToAccountPage() throws InterruptedException{
 		extent.startTest("TC02.2", "Navigate To Account Home Page");
 		driver.findElement(By.xpath(".//*[@id='Account_Tab']/a")).click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		extent.log(LogStatus.INFO, "Verify Navigation Syep 1","View details below:", ScreenShot.captureScreen(driver,"Account Home Page"));
 		driver.findElement(By.xpath(".//*[@id='hotlist']/table/tbody/tr/td[2]/input")).click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		extent.log(LogStatus.INFO, "Verify Navigation Step 2","View details below:", ScreenShot.captureScreen(driver,"Account Home Page2"));
 		driver.findElement(By.xpath(".//*[@id='bottomButtonRow']/input[1]")).click();
 		
 		//navi.navigateToAccountCreatePage();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		extent.log(LogStatus.INFO, "Verify Navigation Step 3","View details below:", ScreenShot.captureScreen(driver,"Account Home Page3"));
 		extent.endTest();
 	}
@@ -79,7 +79,7 @@ public class IntegrateMemberAcWithLogin extends StartUp{
 		extent.startTest("TC02.4", "Verify Invalid SSN(Negetive Test))");
 		AllMethod.enterDataOnTheMembarAcc("Nahida", "akther", "chuni",
 				"10/12/1981", "221212014", "3215247548", "Test@yahoo.com");
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		extent.log(LogStatus.INFO, "Submit Valid Data withinvalid SSN",
 				"View details below:");
 		driver.findElement(By.xpath(".//*[@id='topButtonRow']/input[1]"))

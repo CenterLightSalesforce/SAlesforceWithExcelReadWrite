@@ -1,108 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="4" passed="3">
+<testng-results skipped="0" failed="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48865" started-at="2015-12-10T17:35:37Z" finished-at="2015-12-10T17:36:26Z">
+  <suite name="Suite" duration-ms="36967" started-at="2015-12-16T20:47:22Z" finished-at="2015-12-16T20:47:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48865" started-at="2015-12-10T17:35:37Z" finished-at="2015-12-10T17:36:26Z">
-      <class name="testCase.TestCaseForCreateNewContact">
-        <test-method status="PASS" signature="tearup()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="tearup" is-config="true" duration-ms="17852" started-at="2015-12-10T12:35:37Z" finished-at="2015-12-10T12:35:55Z">
+    <test name="Test" duration-ms="36967" started-at="2015-12-16T20:47:22Z" finished-at="2015-12-16T20:47:59Z">
+      <class name="testCase.IntegrateMemberAcWithLogin">
+        <test-method status="PASS" signature="loginIntoApplication()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="loginIntoApplication" duration-ms="5703" started-at="2015-12-16T15:47:38Z" finished-at="2015-12-16T15:47:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearup -->
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="openApplication" duration-ms="3466" started-at="2015-12-10T12:35:55Z" finished-at="2015-12-10T12:35:58Z">
+        </test-method> <!-- loginIntoApplication -->
+        <test-method status="PASS" signature="navigateToAccountPage()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="navigateToAccountPage" duration-ms="3458" started-at="2015-12-16T15:47:44Z" finished-at="2015-12-16T15:47:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="navigateToContactsPage()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="navigateToContactsPage" duration-ms="7186" started-at="2015-12-10T12:35:58Z" finished-at="2015-12-10T12:36:05Z">
+        </test-method> <!-- navigateToAccountPage -->
+        <test-method status="PASS" signature="enterBlankDataIntoMemberAc()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterBlankDataIntoMemberAc" duration-ms="1508" started-at="2015-12-16T15:47:48Z" finished-at="2015-12-16T15:47:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToContactsPage -->
-        <test-method status="PASS" signature="verifyErrorMsgOnBlankSubmit()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="verifyErrorMsgOnBlankSubmit" duration-ms="4541" started-at="2015-12-10T12:36:05Z" finished-at="2015-12-10T12:36:10Z">
+        </test-method> <!-- enterBlankDataIntoMemberAc -->
+        <test-method status="PASS" signature="enterInvalidSsn()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidSsn" duration-ms="1864" started-at="2015-12-16T15:47:49Z" finished-at="2015-12-16T15:47:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyErrorMsgOnBlankSubmit -->
-        <test-method status="FAIL" signature="createANewContact()[pri:0, instance:testCase.TestCaseForCreateNewContact@addb54]" name="createANewContact" duration-ms="15674" started-at="2015-12-10T12:36:10Z" finished-at="2015-12-10T12:36:26Z">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
-            <message>
-              <![CDATA[Error communicating with the remote browser. It may have died.
-Build info: version: '2.47.1', revision: '411b314', time: '2015-07-30 02:56:46'
-System info: host: '01250LT2368', ip: '192.168.1.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_60'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: '2.47.1', revision: '411b314', time: '2015-07-30 02:56:46'
-System info: host: '01250LT2368', ip: '192.168.1.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_60'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:589)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at testCase.TestCaseForCreateNewContact.createANewContact(TestCaseForCreateNewContact.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:161)
-	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
-	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:170)
-	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:393)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
-	... 44 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+        </test-method> <!-- enterInvalidSsn -->
+        <test-method status="PASS" signature="enterInvalidDate()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidDate" duration-ms="2229" started-at="2015-12-16T15:47:51Z" finished-at="2015-12-16T15:47:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createANewContact -->
-      </class> <!-- testCase.TestCaseForCreateNewContact -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- enterInvalidDate -->
+        <test-method status="PASS" signature="enterInvalidEmail()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidEmail" duration-ms="1952" started-at="2015-12-16T15:47:53Z" finished-at="2015-12-16T15:47:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterInvalidEmail -->
+        <test-method status="PASS" signature="createAMemberAcWithValidData()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="createAMemberAcWithValidData" duration-ms="3519" started-at="2015-12-16T15:47:55Z" finished-at="2015-12-16T15:47:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAMemberAcWithValidData -->
+      </class> <!-- testCase.IntegrateMemberAcWithLogin -->
+      <class name="testCase.TestCaseForLogin">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="openBrowser" is-config="true" duration-ms="9946" started-at="2015-12-16T15:47:12Z" finished-at="2015-12-16T15:47:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyInvalidIDBlank()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidIDBlank" duration-ms="1248" started-at="2015-12-16T15:47:22Z" finished-at="2015-12-16T15:47:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidIDBlank -->
+        <test-method status="PASS" signature="verifyInvalidID()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidID" duration-ms="968" started-at="2015-12-16T15:47:23Z" finished-at="2015-12-16T15:47:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidID -->
+        <test-method status="PASS" signature="verifyInvalidPassword()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidPassword" duration-ms="1178" started-at="2015-12-16T15:47:24Z" finished-at="2015-12-16T15:47:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidPassword -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="validLogin" duration-ms="827" started-at="2015-12-16T15:47:25Z" finished-at="2015-12-16T15:47:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="verifyRemebarMeCheckBox()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyRemebarMeCheckBox" duration-ms="1431" started-at="2015-12-16T15:47:26Z" finished-at="2015-12-16T15:47:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRemebarMeCheckBox -->
+        <test-method status="PASS" signature="logIn()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logIn" duration-ms="6355" started-at="2015-12-16T15:47:27Z" finished-at="2015-12-16T15:47:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logIn -->
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyTitle" duration-ms="206" started-at="2015-12-16T15:47:34Z" finished-at="2015-12-16T15:47:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logout" duration-ms="4502" started-at="2015-12-16T15:47:34Z" finished-at="2015-12-16T15:47:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="tearDown" is-config="true" duration-ms="1248" started-at="2015-12-16T15:47:59Z" finished-at="2015-12-16T15:48:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCase.TestCaseForLogin -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

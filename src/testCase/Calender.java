@@ -14,8 +14,8 @@ public class Calender {
 		
 		WebDriver driver = new FirefoxDriver();
 		SignInPage sign = new SignInPage(driver);
-        String monthLooking="June 2016";
-        String dayLooking="24";
+        String monthLooking="July 2016";
+        String dayLooking="19";
         String[] monthLeftside=monthLooking.split(" ");
         String fSplit=monthLeftside[0];
         String sSplit=monthLeftside[1];
@@ -23,6 +23,7 @@ public class Calender {
 		driver.get("https://test.salesforce.com/");
 		Thread.sleep(2000);
 		sign.validLogin();
+		driver.manage().window().maximize();
 		Thread.sleep(3000);
 		System.out.println("Date Looking For:"+verifyTitle);
 		

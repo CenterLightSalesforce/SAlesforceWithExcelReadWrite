@@ -59,8 +59,8 @@ public class TestCaseForLogin extends StartUp {
 		extent.log(LogStatus.INFO, "Enter User ID and Password","View detail below:");
 		// Click SignIn Button
 		AllMethod.clickButton("xpath", ".//*[@id='Login']", "click");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//Thread.sleep(2000);
 		WebElement errorMsgOnLogIn = driver.findElement(By
 				.xpath(".//*[@id='error']"));
 
@@ -79,7 +79,7 @@ public class TestCaseForLogin extends StartUp {
 		}
 
 		driver.get(url);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		// Skip password recovery Link
 		extent.log(LogStatus.SKIP, "Verify Forget Link", "View details below:");
 		extent.endTest();
