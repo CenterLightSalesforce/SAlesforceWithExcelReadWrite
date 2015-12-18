@@ -1,31 +1,75 @@
 package testCase;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import pageObject.SignInPage;
+import utilities.ExcelUtilis;
 
 public class Calender {
-
-	public static void main(String[] args) throws InterruptedException {
+	static int countMatchLanguage=0;
+	static int countUnMatchLanguage=0;
+	public static void main(String[] args) throws Exception {
 		
 		WebDriver driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		SignInPage sign = new SignInPage(driver);
-        String monthLooking="July 2016";
-        String dayLooking="19";
-        String[] monthLeftside=monthLooking.split(" ");
-        String fSplit=monthLeftside[0];
-        String sSplit=monthLeftside[1];
-        String verifyTitle=fSplit+" "+dayLooking+","+sSplit;
+		ExcelUtilis excel=new ExcelUtilis(driver);
+       // String monthLooking="July 2016";
+        //String dayLooking="19";
+        //String[] monthLeftside=monthLooking.split(" ");
+        //String fSplit=monthLeftside[0];
+        //String sSplit=monthLeftside[1];
+        //String verifyTitle=fSplit+" "+dayLooking+","+sSplit;
 		driver.get("https://test.salesforce.com/");
 		Thread.sleep(2000);
 		sign.validLogin();
 		driver.manage().window().maximize();
 		Thread.sleep(3000);
-		System.out.println("Date Looking For:"+verifyTitle);
+		driver.findElement(By.xpath(".//*[@id='Account_Tab']/a")).click();
+		driver.findElement(By.xpath(".//*[@id='hotlist']/table/tbody/tr/td[2]/input")).click();
+		driver.findElement(By.xpath(".//*[@id='bottomButtonRow']/input[1]")).click();
+		
+		excel.setExcelFile("C:\\Users\\jakther\\Desktop\\jahed\\workspace\\SalesforceDemo\\src\\testData\\TestData.xlsx", "Sheet2");
+		
+		
+		
+		
+		List<WebElement> listData=driver.findElements(By.xpath(".//*[@id='00NF000000ColUB']/option"));
+		//List<WebElement> listData=driver.findElements(By.tagName("select")).get(1);
+		for(int h=1;h<listData.size();h++){
+			WebElement listText=driver.findElements(By.xpath(".//*[@id='00NF000000ColUB']/option")).get(h);
+			String text=listText.getText();
+			String getDataFromExcel=excel.getCellData(h-1, 0);
+			//System.out.println("Data From Application     Data From Excel File");
+			//System.out.println(text+"                      "+getDataFromExcel);
+			
+			if(text.equals(getDataFromExcel)){
+				countMatchLanguage=countMatchLanguage+1;
+			}else{
+				countUnMatchLanguage=countUnMatchLanguage+1;
+				System.out.println("Language Didnt Match.On the Application Language Found :"+text+" But on The Excel Sheet Language are:"+getDataFromExcel);
+			}
+			
+		}
+		
+		
+		if (countMatchLanguage==listData.size()){
+			System.out.println("All Langhuage Match with Excel File");
+		}else{
+			System.out.println(countUnMatchLanguage+ " Langhuage Didnt Match with Excel File");
+		}
+		
+	
+		
+		
+		
+		/*System.out.println("Date Looking For:"+verifyTitle);
 		
 		try{
 		
@@ -70,7 +114,7 @@ public class Calender {
 			System.out.println("Test Fail");
 		}
 		
-		
+		*/
 		
 		
 		/*

@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
 
 public class ExcelUtilis {
 
@@ -21,6 +22,15 @@ public class ExcelUtilis {
 
 	public static final String File_TestData = "TestData.xlsx";
 
+	public WebDriver driver;
+	
+	
+	
+	public ExcelUtilis(WebDriver driver){
+		this.driver=driver;
+		
+		
+	}
 	// This method is to set the File path and to open the Excel file, Pass
 	// Excel Path and Sheetname as Arguments to this method
 
