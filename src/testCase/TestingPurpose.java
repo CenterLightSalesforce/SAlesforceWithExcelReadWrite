@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import pageObject.NavigateToOtherPage;
 import utilities.AllMethod;
 
-public class testingPurpose {
+public class TestingPurpose {
 	
 	static WebDriver driver=null;
 	static NavigateToOtherPage pageNavi=new NavigateToOtherPage(driver);
