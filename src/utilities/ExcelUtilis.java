@@ -76,6 +76,13 @@ public class ExcelUtilis {
 		}
 
 	}
+	
+	//For Total Row Count
+	public static int getRowCountFromExcel(){
+		return ExcelWSheet.getLastRowNum();
+		
+		
+	}
 
 	// This method is to write in the Excel cell, Row num and Col num are the
 	// parameters
