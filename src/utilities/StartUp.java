@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import com.relevantcodes.extentreports.DisplayOrder;
@@ -27,6 +28,26 @@ public class StartUp {
 	
 	@BeforeSuite
 	public void openBrowser() throws InterruptedException {
+	/*
+	 * WebDriver driver = null;
+	//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		//System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+       /// driver=new InternetExplorerDriver(); 
+		  System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+	        DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();  
+	        ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+	        WebDriver driver = new InternetExplorerDriver(ieCapabilities);
+
+		
+		
+	 * 
+		*/
+		
+		
+		
+		
 		
 		//System.setProperty("webdriver.ie.driver", "c://IEDriverServer.exe");
         //driver=new InternetExplorerDriver(); 

@@ -10,13 +10,13 @@ import org.openqa.selenium.WebDriver;
 
 public class ExcelUtilis {
 
-	private static XSSFSheet ExcelWSheet;
+	private static XSSFSheet excelWSheet;
 
-	private static XSSFWorkbook ExcelWBook;
+	private static XSSFWorkbook excelWBook;
 
-	private static XSSFCell Cell;
+	private static XSSFCell cell;
 
-	private static XSSFRow Row;
+	private static XSSFRow row;
 
 	public static final String Path_TestData = "C:\\Users\\jakther\\Desktop\\jahed\\workspace\\DataDriven\\src\\testData\\";
 
@@ -44,9 +44,9 @@ public class ExcelUtilis {
 
 			// Access the required test data sheet
 
-			ExcelWBook = new XSSFWorkbook(ExcelFile);
+			excelWBook = new XSSFWorkbook(ExcelFile);
 
-			ExcelWSheet = ExcelWBook.getSheet(SheetName);
+			excelWSheet = excelWBook.getSheet(SheetName);
 
 		} catch (Exception e) {
 
@@ -63,11 +63,11 @@ public class ExcelUtilis {
 
 		try {
 
-			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+			cell = excelWSheet.getRow(RowNum).getCell(ColNum);
 
-			String CellData = Cell.getStringCellValue();
+			String cellData = cell.getStringCellValue();
 
-			return CellData;
+			return cellData;
 
 		} catch (Exception e) {
 
@@ -79,7 +79,7 @@ public class ExcelUtilis {
 	
 	//For Total Row Count
 	public  int getRowCountFromExcel(){
-		return ExcelWSheet.getLastRowNum();
+		return excelWSheet.getLastRowNum();
 		
 		
 	}
@@ -91,20 +91,20 @@ public class ExcelUtilis {
 
 		try {
 
-			Row = ExcelWSheet.getRow(RowNum);
+			row = excelWSheet.getRow(RowNum);
 
-			Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
+			cell = row.getCell(ColNum, row.RETURN_BLANK_AS_NULL);
 
-			if (Cell == null) {
+			if (cell == null) {
 
-				Cell = Row.createCell(ColNum);
-				Cell.setCellType(Cell.CELL_TYPE_STRING);
-				Cell.setCellValue(Result);
+				cell = row.createCell(ColNum);
+				cell.setCellType(cell.CELL_TYPE_STRING);
+				cell.setCellValue(Result);
 
 			} else {
 
-				Cell.setCellType(Cell.CELL_TYPE_STRING);
-				Cell.setCellValue(Result);
+				cell.setCellType(cell.CELL_TYPE_STRING);
+				cell.setCellValue(Result);
 
 			}
 
@@ -112,7 +112,7 @@ public class ExcelUtilis {
 
 			FileOutputStream fileOut = new FileOutputStream(excelPath);
 
-			ExcelWBook.write(fileOut);
+			excelWBook.write(fileOut);
 
 			fileOut.flush();
 
@@ -129,7 +129,7 @@ public  int getRowSize(String sheet1){
 		
 	//int rowSize=ExcelWSheet.getLastRowNum()-ExcelWSheet.getFirstRowNum();
 	//int rowSize=ExcelWSheet.getLastRowNum();
-	int cou=ExcelWBook.getSheet(sheet1).getLastRowNum();
+	int cou=excelWBook.getSheet(sheet1).getLastRowNum();
 	return cou;
 }
 }

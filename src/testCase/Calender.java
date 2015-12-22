@@ -6,6 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import pageObject.SignInPage;
 import utilities.ExcelUtilis;
@@ -19,8 +23,21 @@ public class Calender {
 	public static void main(String[] args) throws Exception {
 
 		WebDriver driver = null;
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+	//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		//System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+       /// driver=new InternetExplorerDriver(); 
+		 // System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+	    //    DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();  
+	     ///   ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+	     //   WebDriver driver = new InternetExplorerDriver(ieCapabilities);
+
+		
+		 driver=new FirefoxDriver();
+		
+		
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		SignInPage sign = new SignInPage(driver);
 		ExcelUtilis excel = new ExcelUtilis(driver);
@@ -61,8 +78,8 @@ public class Calender {
 				countMatchLanguage = countMatchLanguage + 1;
 			} else {
 				countUnMatchLanguage = countUnMatchLanguage + 1;
-				System.out.println("Language Didnt Match.On the Application Language Found :" + text
-						+ " But on The Excel Sheet Language are:" + getDataFromExcel);
+				System.out.println("Language Didnt Match On the Application. Language Found :" + text
+						+ " .But on The Excel Sheet Language are:" + getDataFromExcel);
 			}
 
 		}
