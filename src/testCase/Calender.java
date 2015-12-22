@@ -33,19 +33,19 @@ public class Calender {
 
 			if (i == 0) {
 				driver = new FirefoxDriver();
-				System.out.println("Start Mozila Firefox");
+				System.out.println("Start Mozila Firefox\n");
 			} else if (i == 1) {
 				System.setProperty("webdriver.chrome.driver",
 						"C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
 				driver = new ChromeDriver();
-				System.out.println("Start Google Chrome ");
+				System.out.println("Start Google Chrome\n ");
 			} else if (i == 2) {
 				System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
 				DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
 				ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
 						true);
 				driver = new InternetExplorerDriver(ieCapabilities);
-				System.out.println("Start Internet Explorar");
+				System.out.println("Start Internet Explorar\n");
 			} else {
 				break;
 			}
@@ -77,20 +77,20 @@ public class Calender {
 				WebElement listText = driver.findElements(By.xpath(".//*[@id='00NF000000ColUB']/option")).get(h);
 				String text = listText.getText();
 				String getDataFromExcel = excel.getCellData(h - 1, 0);
-				System.out.println("Data From Application Data From Excel File");
+				System.out.println("Data From Application\t\t|| Data From Excel File");
 
-				if (text.length() < 8) {
+				if (text.length() < 8  ) {
 
-					System.out.println(text + "\t\t\t" + getDataFromExcel);
+					System.out.println(text + "\t\t\t\t" +"||"+ getDataFromExcel);
 				} else {
-					System.out.println(text + "\t\t" + getDataFromExcel);
+					System.out.println(text + "\t\t\t" +"||"+ getDataFromExcel);
 				}
 
 				if (text.equals(getDataFromExcel)) {
 					countMatchLanguage = countMatchLanguage + 1;
 				} else {
 					countUnMatchLanguage = countUnMatchLanguage + 1;
-					System.out.println("Language Didnt Match On the Application. Language Found :" + text
+					System.err.println("Language Didnt Match On the Application. Language Found :" + text
 							+ " .But on The Excel Sheet Language are:" + getDataFromExcel);
 				}
 
