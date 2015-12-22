@@ -156,7 +156,8 @@ public class Calender {
 		  System.out.println("start Test case ");
 		  try{
 			  System.out.println("verify date and month");
-		  String  title=driver.findElement(By.cssSelector(".dateText")).getText();
+		  String  title=driver.findElement(By.xpath(".//*[@id='bCalDiv']/div/div[2]/span[3]")).getText();
+		  System.out.println(title);
 		  String []getTitle=title.split(" ");
 		  String fTitle=getTitle[1];
 		  String sTitle=getTitle[2];
