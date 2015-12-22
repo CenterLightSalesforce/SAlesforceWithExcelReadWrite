@@ -22,41 +22,44 @@ public class DaySelect {
 		
 		try{
 		
-		     for(int r=0;r<3;r++){
-				if (r == 0)
-				 {
-				driver = new FirefoxDriver();
-				System.out.println("Start Mozila Firefox\n");
-		        } else if (r == 1) 
-			    	{
-				System.setProperty("webdriver.chrome.driver",
-						"C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
-				driver = new ChromeDriver();
-				System.out.println("Start Google Chrome\n ");
-			    } else if (r == 2)
-			         {
-				System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
-				DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-				ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
-						true);
-				driver = new InternetExplorerDriver(ieCapabilities);
-				System.out.println("Start Internet Explorar\n");
-			    } else
-			     {
-					}
+		     for(int r=0;r<3;r++)
+		          {
+				     if (r == 0)
+				         {
+				          driver = new FirefoxDriver();
+				          System.out.println("Start Mozila Firefox\n");
+		                 }
+				     else if (r == 1) 
+			          	{
+				          System.setProperty("webdriver.chrome.driver",
+						  "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+				          driver = new ChromeDriver();
+				          System.out.println("Start Google Chrome\n ");
+			            }
+				    else if (r == 2)
+			            {
+				          System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+				          DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
+				          ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
+						  true);
+				          driver = new InternetExplorerDriver(ieCapabilities);
+				          System.out.println("Start Internet Explorar\n");
+			            }
+				    else
+			            {
+					    }
 		
 		SignInPage sign = new SignInPage(driver);
 		driver.get("https://test.salesforce.com/");
 		Thread.sleep(2000);
 		sign.validLogin();
 		driver.manage().window().maximize();
-		
 		Thread.sleep(2000);
-		     String yearLooking="2016";
-		     String monthLooking="July";
-			 String dayLooking="19";
-			 String dateVerify=monthLooking+" "+yearLooking;
-	    	  verifyTitle=monthLooking+" "+dayLooking+","+yearLooking;
+		String yearLooking="2016";
+		String monthLooking="July";
+		String dayLooking="19";
+		String dateVerify=monthLooking+" "+yearLooking;
+	    verifyTitle=monthLooking+" "+dayLooking+","+yearLooking;
 			
 				    
 			 for(int i=0;i<12;i++){
