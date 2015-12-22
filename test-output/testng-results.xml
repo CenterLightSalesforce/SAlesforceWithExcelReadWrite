@@ -2,78 +2,78 @@
 <testng-results skipped="0" failed="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="47377" started-at="2015-12-17T21:51:11Z" finished-at="2015-12-17T21:51:58Z">
+  <suite name="Suite" duration-ms="47118" started-at="2015-12-22T14:35:45Z" finished-at="2015-12-22T14:36:32Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="47377" started-at="2015-12-17T21:51:11Z" finished-at="2015-12-17T21:51:58Z">
+    <test name="Test" duration-ms="47118" started-at="2015-12-22T14:35:45Z" finished-at="2015-12-22T14:36:32Z">
       <class name="testCase.IntegrateMemberAcWithLogin">
-        <test-method status="PASS" signature="loginIntoApplication()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="loginIntoApplication" duration-ms="6250" started-at="2015-12-17T16:51:30Z" finished-at="2015-12-17T16:51:36Z">
+        <test-method status="PASS" signature="loginIntoApplication()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="loginIntoApplication" duration-ms="5144" started-at="2015-12-22T09:36:08Z" finished-at="2015-12-22T09:36:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginIntoApplication -->
-        <test-method status="PASS" signature="navigateToAccountPage()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="navigateToAccountPage" duration-ms="5605" started-at="2015-12-17T16:51:36Z" finished-at="2015-12-17T16:51:42Z">
+        <test-method status="PASS" signature="navigateToAccountPage()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="navigateToAccountPage" duration-ms="5446" started-at="2015-12-22T09:36:13Z" finished-at="2015-12-22T09:36:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToAccountPage -->
-        <test-method status="PASS" signature="enterBlankDataIntoMemberAc()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterBlankDataIntoMemberAc" duration-ms="2020" started-at="2015-12-17T16:51:42Z" finished-at="2015-12-17T16:51:44Z">
+        <test-method status="PASS" signature="enterBlankDataIntoMemberAc()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="enterBlankDataIntoMemberAc" duration-ms="1862" started-at="2015-12-22T09:36:18Z" finished-at="2015-12-22T09:36:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterBlankDataIntoMemberAc -->
-        <test-method status="PASS" signature="enterInvalidSsn()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidSsn" duration-ms="1750" started-at="2015-12-17T16:51:44Z" finished-at="2015-12-17T16:51:45Z">
+        <test-method status="PASS" signature="enterInvalidSsn()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="enterInvalidSsn" duration-ms="1383" started-at="2015-12-22T09:36:20Z" finished-at="2015-12-22T09:36:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInvalidSsn -->
-        <test-method status="PASS" signature="enterInvalidDate()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidDate" duration-ms="1882" started-at="2015-12-17T16:51:45Z" finished-at="2015-12-17T16:51:47Z">
+        <test-method status="PASS" signature="enterInvalidDate()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="enterInvalidDate" duration-ms="1580" started-at="2015-12-22T09:36:22Z" finished-at="2015-12-22T09:36:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInvalidDate -->
-        <test-method status="PASS" signature="enterInvalidEmail()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="enterInvalidEmail" duration-ms="2000" started-at="2015-12-17T16:51:47Z" finished-at="2015-12-17T16:51:49Z">
+        <test-method status="PASS" signature="enterInvalidEmail()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="enterInvalidEmail" duration-ms="1459" started-at="2015-12-22T09:36:23Z" finished-at="2015-12-22T09:36:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInvalidEmail -->
-        <test-method status="PASS" signature="createAMemberAcWithValidData()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@9711b]" name="createAMemberAcWithValidData" duration-ms="9100" started-at="2015-12-17T16:51:49Z" finished-at="2015-12-17T16:51:58Z">
+        <test-method status="PASS" signature="createAMemberAcWithValidData()[pri:0, instance:testCase.IntegrateMemberAcWithLogin@f67b76]" name="createAMemberAcWithValidData" duration-ms="7013" started-at="2015-12-22T09:36:25Z" finished-at="2015-12-22T09:36:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAMemberAcWithValidData -->
       </class> <!-- testCase.IntegrateMemberAcWithLogin -->
       <class name="testCase.TestCaseForLogin">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="openBrowser" is-config="true" duration-ms="13368" started-at="2015-12-17T16:50:58Z" finished-at="2015-12-17T16:51:11Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="openBrowser" is-config="true" duration-ms="9181" started-at="2015-12-22T09:35:35Z" finished-at="2015-12-22T09:35:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyInvalidIDBlank()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidIDBlank" duration-ms="1321" started-at="2015-12-17T16:51:11Z" finished-at="2015-12-17T16:51:12Z">
+        <test-method status="PASS" signature="verifyInvalidIDBlank()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="verifyInvalidIDBlank" duration-ms="3208" started-at="2015-12-22T09:35:45Z" finished-at="2015-12-22T09:35:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidIDBlank -->
-        <test-method status="PASS" signature="verifyInvalidID()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidID" duration-ms="1194" started-at="2015-12-17T16:51:12Z" finished-at="2015-12-17T16:51:14Z">
+        <test-method status="PASS" signature="verifyInvalidID()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="verifyInvalidID" duration-ms="2500" started-at="2015-12-22T09:35:48Z" finished-at="2015-12-22T09:35:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidID -->
-        <test-method status="PASS" signature="verifyInvalidPassword()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyInvalidPassword" duration-ms="1795" started-at="2015-12-17T16:51:14Z" finished-at="2015-12-17T16:51:15Z">
+        <test-method status="PASS" signature="verifyInvalidPassword()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="verifyInvalidPassword" duration-ms="3121" started-at="2015-12-22T09:35:50Z" finished-at="2015-12-22T09:35:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidPassword -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="validLogin" duration-ms="1102" started-at="2015-12-17T16:51:15Z" finished-at="2015-12-17T16:51:17Z">
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="validLogin" duration-ms="726" started-at="2015-12-22T09:35:53Z" finished-at="2015-12-22T09:35:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="verifyRemebarMeCheckBox()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyRemebarMeCheckBox" duration-ms="889" started-at="2015-12-17T16:51:17Z" finished-at="2015-12-17T16:51:17Z">
+        <test-method status="PASS" signature="verifyRemebarMeCheckBox()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="verifyRemebarMeCheckBox" duration-ms="1089" started-at="2015-12-22T09:35:54Z" finished-at="2015-12-22T09:35:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRemebarMeCheckBox -->
-        <test-method status="PASS" signature="logIn()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logIn" duration-ms="7026" started-at="2015-12-17T16:51:17Z" finished-at="2015-12-17T16:51:24Z">
+        <test-method status="PASS" signature="logIn()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="logIn" duration-ms="7751" started-at="2015-12-22T09:35:55Z" finished-at="2015-12-22T09:36:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="verifyTitle" duration-ms="240" started-at="2015-12-17T16:51:24Z" finished-at="2015-12-17T16:51:25Z">
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="verifyTitle" duration-ms="256" started-at="2015-12-22T09:36:03Z" finished-at="2015-12-22T09:36:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="logout" duration-ms="5050" started-at="2015-12-17T16:51:25Z" finished-at="2015-12-17T16:51:30Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="logout" duration-ms="4536" started-at="2015-12-22T09:36:03Z" finished-at="2015-12-22T09:36:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.TestCaseForLogin@96442d]" name="tearDown" is-config="true" duration-ms="1480" started-at="2015-12-17T16:51:58Z" finished-at="2015-12-17T16:52:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCase.TestCaseForLogin@1f97b55]" name="tearDown" is-config="true" duration-ms="2043" started-at="2015-12-22T09:36:32Z" finished-at="2015-12-22T09:36:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

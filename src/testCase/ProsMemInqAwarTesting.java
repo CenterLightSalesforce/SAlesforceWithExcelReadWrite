@@ -1,8 +1,12 @@
 package testCase;
 
+
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import pageObject.SignInPage;
 import utilities.ExcelUtilis;
 
@@ -12,10 +16,13 @@ static WebDriver driver=null;
 static String excelPath="C:\\Users\\jakther\\Desktop\\Awarness.xlsx";
 
 	public static void main(String[] args) throws Exception {
-		
-		//driver=new FirefoxDriver();
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//SignInPage sign = new SignInPage(driver);
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+		driver= new ChromeDriver(); 
+		driver.get("https://test.salesforce.com/");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		SignInPage sign = new SignInPage(driver);
+		sign.validLogin();
+				
 		ExcelUtilis excel = new ExcelUtilis(driver);
 		excel.setExcelFile(excelPath,"Sheet1");
 		int totalRow=excel.getRowCountFromExcel();

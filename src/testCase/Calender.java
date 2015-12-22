@@ -2,26 +2,29 @@ package testCase;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import pageObject.SignInPage;
 import utilities.ExcelUtilis;
 
 public class Calender {
 	static int countMatchLanguage = 0;
 	static int countUnMatchLanguage = 0;
-static String excelPath="C:\\Users\\jakther\\Desktop\\jahed\\workspace\\SalesforceDemo\\src\\testData\\TestData.xlsx";
+	static String excelPath = "C:\\Users\\jakther\\Desktop\\jahed\\workspace\\SalesforceDemo\\src\\testData\\TestData.xlsx";
+	
+	
 	public static void main(String[] args) throws Exception {
 
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = null;
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		SignInPage sign = new SignInPage(driver);
 		ExcelUtilis excel = new ExcelUtilis(driver);
-		excel.setExcelFile(excelPath,"Sheet2");
+		excel.setExcelFile(excelPath, "Sheet2");
 
 		// String monthLooking="July 2016";
 		// String dayLooking="19";
@@ -38,7 +41,6 @@ static String excelPath="C:\\Users\\jakther\\Desktop\\jahed\\workspace\\Salesfor
 		driver.findElement(By.xpath(".//*[@id='hotlist']/table/tbody/tr/td[2]/input")).click();
 		driver.findElement(By.xpath(".//*[@id='bottomButtonRow']/input[1]")).click();
 
-		
 		List<WebElement> listData = driver.findElements(By.xpath(".//*[@id='00NF000000ColUB']/option"));
 		// List<WebElement>
 		// listData=driver.findElements(By.tagName("select")).get(1);
@@ -46,15 +48,14 @@ static String excelPath="C:\\Users\\jakther\\Desktop\\jahed\\workspace\\Salesfor
 			WebElement listText = driver.findElements(By.xpath(".//*[@id='00NF000000ColUB']/option")).get(h);
 			String text = listText.getText();
 			String getDataFromExcel = excel.getCellData(h - 1, 0);
-			 System.out.println("Data From Application Data From Excel File");
-			 
-			 
-			 if(text.length()<8){
-			 
-			 System.out.println(text+"\t\t\t"+getDataFromExcel);
-			 }else{
-				 System.out.println(text+"\t\t"+getDataFromExcel);
-			 }
+			System.out.println("Data From Application Data From Excel File");
+
+			if (text.length() < 8) {
+
+				System.out.println(text + "\t\t\t" + getDataFromExcel);
+			} else {
+				System.out.println(text + "\t\t" + getDataFromExcel);
+			}
 
 			if (text.equals(getDataFromExcel)) {
 				countMatchLanguage = countMatchLanguage + 1;
@@ -72,6 +73,9 @@ static String excelPath="C:\\Users\\jakther\\Desktop\\jahed\\workspace\\Salesfor
 			System.out.println(countUnMatchLanguage + " Language Didnt Match with Excel File");
 		}
 		System.out.println(countMatchLanguage + " Language  Match with Excel File");
+		
+		
+		driver.close();
 		/*
 		 * System.out.println("Date Looking For:"+verifyTitle);
 		 * 

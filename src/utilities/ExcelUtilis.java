@@ -34,7 +34,7 @@ public class ExcelUtilis {
 	// This method is to set the File path and to open the Excel file, Pass
 	// Excel Path and Sheetname as Arguments to this method
 
-	public static void setExcelFile(String Path, String SheetName) throws Exception {
+	public  void setExcelFile(String Path, String SheetName) throws Exception {
 
 		try {
 
@@ -59,7 +59,7 @@ public class ExcelUtilis {
 	// This method is to read the test data from the Excel cell, in this we are
 	// passing parameters as Row num and Col num
 
-	public static String getCellData(int RowNum, int ColNum) throws Exception {
+	public  String getCellData(int RowNum, int ColNum) throws Exception {
 
 		try {
 
@@ -78,7 +78,7 @@ public class ExcelUtilis {
 	}
 	
 	//For Total Row Count
-	public static int getRowCountFromExcel(){
+	public  int getRowCountFromExcel(){
 		return ExcelWSheet.getLastRowNum();
 		
 		
@@ -87,7 +87,7 @@ public class ExcelUtilis {
 	// This method is to write in the Excel cell, Row num and Col num are the
 	// parameters
 
-	public static void setCellData(String excelPath,String Result, int RowNum, int ColNum) throws Exception {
+	public  void setCellData(String excelPath,String Result, int RowNum, int ColNum) throws Exception {
 
 		try {
 
@@ -125,7 +125,7 @@ public class ExcelUtilis {
 		}
 	}
 	
-public static int getRowSize(String sheet1){
+public  int getRowSize(String sheet1){
 		
 	//int rowSize=ExcelWSheet.getLastRowNum()-ExcelWSheet.getFirstRowNum();
 	//int rowSize=ExcelWSheet.getLastRowNum();

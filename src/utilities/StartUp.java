@@ -32,7 +32,7 @@ public class StartUp {
         //driver=new InternetExplorerDriver(); 
 	
 		
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
 		extent.init(reportLocation + "Salesforce.html", true,
 				DisplayOrder.BY_OLDEST_TO_LATEST, GridType.STANDARD);
 		extent.config().documentTitle("Salesforce Test report");
@@ -43,8 +43,8 @@ public class StartUp {
 				.reportHeadline(
 						"<b>Salesforce Selenium Automation Test Report.Develop By:JAHED AKTHER</b>");
 		extent.startTest("TC01.1", "Open The Browser");
-		  //driver = new ChromeDriver();  
-		driver = new FirefoxDriver();
+		  driver = new ChromeDriver();  
+		//driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.navigate().to(url);
 		

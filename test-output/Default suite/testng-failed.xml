@@ -3,12 +3,19 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCase.TestCaseForCreateNewContact">
+      <class name="testCase.TestCaseForLogin">
         <methods>
-          <include name="createANewContact"/>
-          <include name="tearup"/>
+          <include name="logIn"/>
+          <include name="logout"/>
+          <include name="validLogin"/>
+          <include name="verifyInvalidID"/>
+          <include name="verifyInvalidPassword"/>
+          <include name="verifyRemebarMeCheckBox"/>
+          <include name="verifyInvalidIDBlank"/>
+          <include name="verifyTitle"/>
+          <include name="openBrowser"/>
         </methods>
-      </class> <!-- testCase.TestCaseForCreateNewContact -->
+      </class> <!-- testCase.TestCaseForLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
