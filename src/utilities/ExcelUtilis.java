@@ -127,8 +127,6 @@ public class ExcelUtilis {
 	
 public  int getRowSize(String sheet1){
 		
-	//int rowSize=ExcelWSheet.getLastRowNum()-ExcelWSheet.getFirstRowNum();
-	//int rowSize=ExcelWSheet.getLastRowNum();
 	int cou=excelWBook.getSheet(sheet1).getLastRowNum();
 	return cou;
 }

@@ -15,7 +15,7 @@ public class SignInPage {
 	private By loginBtn = By.id("Login");
 	private By errorMsgTxt = By.id("error");
 	private String userName = "jakther@centerlight.org.qual";
-	private String password = "Jahed2310";
+	private String password = "06082003Tuba";
 
 	public SignInPage(WebDriver driver) {
 		this.driver = driver;
