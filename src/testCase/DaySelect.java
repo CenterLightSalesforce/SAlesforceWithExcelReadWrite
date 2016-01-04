@@ -51,6 +51,7 @@ public class DaySelect {
 		
 		SignInPage sign = new SignInPage(driver);
 		driver.get("https://test.salesforce.com/");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		sign.validLogin();
 		driver.manage().window().maximize();
