@@ -36,7 +36,7 @@ public class DaySelect {
 				          driver = new ChromeDriver();
 				          System.out.println("Start Google Chrome\n ");
 			            }
-				    else if (r == 2)
+				     else if (r == 2)
 			            {
 				          System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
 				          DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
