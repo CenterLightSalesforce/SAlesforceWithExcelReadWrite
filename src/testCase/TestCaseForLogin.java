@@ -1,10 +1,13 @@
 package testCase;
 
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.LogStatus;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import com.relevantcodes.extentreports.LogStatus;
+
 import pageObject.HomePage;
 import pageObject.NavigateToOtherPage;
 import utilities.AllMethod;

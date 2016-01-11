@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.GridType;
@@ -21,10 +22,12 @@ public class StartUp {
 	public static WebDriver driver = null;
 	public static final String url = "https://test.salesforce.com/";
 	public static final ExtentReports extent = ExtentReports.get(StartUp.class);
-	public static final String reportLocation = "C:\\Users\\jakther\\Desktop\\jahed\\javawork\\Report\\";
+	public static final String reportLocation = "C:\\Users\\jakther\\Desktop\\jahed\\javawork\\Report\\salesforce.html";
+	//public static ExtentReports extent = new ExtentReports(reportLocation, true);
 	public static String imageLocation = "images/";
 	public static final String validID = "Jakther@centerlight.org.qual";
 	public static final String validPassword = "06082003Tuba";
+	//public static ExtentTest test ;
 	
     //public static String timeStamp=new SimpleDateFormat("mmddyyyy").format(Calendar.getInstance().getTime());
 	
@@ -75,7 +78,6 @@ public class StartUp {
 	@AfterSuite
 	public void tearDown() {
 		// driver.close();
-
 		driver.get("C:\\Users\\jakther\\Desktop\\jahed\\javawork\\Report\\salesforce.html");
 		driver.manage().window().maximize();
 	}
