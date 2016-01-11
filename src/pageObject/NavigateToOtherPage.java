@@ -33,10 +33,10 @@ public class NavigateToOtherPage {
 	public  void navigateToAccountCreatePage() throws InterruptedException{
 		
 		driver.findElement(getAccountTab()).click();
-		Thread.sleep(2000);
+		//driver.findElement(By.xpath(".//*[@id='Account_Tab']/a")).click();
 		driver.findElement(getNewAccountButtin()).click();
-		Thread.sleep(2000);
-		//AllMethod.selectTextFromComboByVisibleTextUseBy(comboBox, visibleTxt);
+		//Thread.sleep(2000);
+		AllMethod.selectTextFromComboByVisibleTextUseBy(comboBox, "Individual Provider");
 		//AllMethod.selectTextFromComboByVisibleText("xpath",".//*[@id='p3']",visibleTxt);
 		//Thread.sleep(2000);
 		driver.findElement(getContinueButtonForNewAcc()).click();

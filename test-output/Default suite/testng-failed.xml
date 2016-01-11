@@ -3,19 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCase.TestCaseForLogin">
+      <class name="testCase.TestCaseForCreateIndiviualProviderAc">
         <methods>
-          <include name="logIn"/>
-          <include name="logout"/>
-          <include name="validLogin"/>
-          <include name="verifyInvalidID"/>
-          <include name="verifyInvalidPassword"/>
-          <include name="verifyRemebarMeCheckBox"/>
-          <include name="verifyInvalidIDBlank"/>
-          <include name="verifyTitle"/>
+          <include name="tearDown"/>
+          <include name="lastNameVerify"/>
+          <include name="blankSubmit"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- testCase.TestCaseForLogin -->
+      </class> <!-- testCase.TestCaseForCreateIndiviualProviderAc -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testCase.TestCaseForLogin">
+      <class name="testCase.TestCaseForCreateIndiviualProviderAc">
         <methods>
-          <include name="logIn"/>
-          <include name="logout"/>
-          <include name="validLogin"/>
-          <include name="verifyInvalidID"/>
-          <include name="verifyInvalidPassword"/>
-          <include name="verifyRemebarMeCheckBox"/>
-          <include name="verifyInvalidIDBlank"/>
-          <include name="verifyTitle"/>
+          <include name="tearDown"/>
+          <include name="lastNameVerify"/>
+          <include name="blankSubmit"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- testCase.TestCaseForLogin -->
-      <class name="testCase.IntegrateMemberAcWithLogin">
-        <methods>
-          <include name="enterBlankDataIntoMemberAc"/>
-          <include name="enterInvalidDate"/>
-          <include name="enterInvalidSsn"/>
-          <include name="navigateToAccountPage"/>
-          <include name="loginIntoApplication"/>
-          <include name="enterInvalidEmail"/>
-          <include name="createAMemberAcWithValidData"/>
-        </methods>
-      </class> <!-- testCase.IntegrateMemberAcWithLogin -->
+      </class> <!-- testCase.TestCaseForCreateIndiviualProviderAc -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

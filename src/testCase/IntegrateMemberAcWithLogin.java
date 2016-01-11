@@ -22,7 +22,7 @@ public class IntegrateMemberAcWithLogin extends StartUp{
 	
 	@Test(priority=0)
 	public void loginIntoApplication() throws InterruptedException{
-		extent.startTest("TC02.1", "Valid LogIn");
+		extent.startTest("TC02.1 Member Account Verify", "Create Member Account.Step:Valid LogIn");
 		//Thread.sleep(2000);
 		//sign.validLogin();
 		AllMethod.validLogin();

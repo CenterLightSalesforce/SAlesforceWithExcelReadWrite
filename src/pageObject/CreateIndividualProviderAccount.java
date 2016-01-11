@@ -54,6 +54,7 @@ public class CreateIndividualProviderAccount {
 	private By qNXTIdTxtbox = By.id("00NF000000D2YFp");
 	private By contactTxtbox = By.id("CF00NF000000ColTp");
 	private By parentTxtbox = By.id("acc3");
+	private By errorMsg = By.xpath(".//*[@id='errorDiv_ep']");
 	
 	
 	//This is Constructor
@@ -70,6 +71,12 @@ public class CreateIndividualProviderAccount {
 	// Click Save Button
 	public void clickSaveButton() {
 		driver.findElement(saveButton).click();
+	}
+	
+	public boolean errorMsg() {
+		boolean error;
+		error=driver.findElement(errorMsg).isDisplayed();
+		return error;
 	}
 
 	// Click Save Button
@@ -293,5 +300,12 @@ public class CreateIndividualProviderAccount {
 	public void enterparentAccount(String pAccount) {
 		driver.findElement(parentTxtbox).sendKeys(pAccount);
 	}
+	
+	public void clearTextAllBox(){
+		driver.findElement(fNameTxtbox).clear();
+		driver.findElement(lNameTxtbox).clear();
+		driver.findElement(mNameTxtbox).clear();
+	}
+	
 
 }

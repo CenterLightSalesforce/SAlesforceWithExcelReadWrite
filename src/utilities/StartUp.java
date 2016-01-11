@@ -14,6 +14,9 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.GridType;
 import com.relevantcodes.extentreports.LogStatus;
 
+import pageObject.CreateIndividualProviderAccount;
+import pageObject.NavigateToOtherPage;
+
 public class StartUp {
 	public static WebDriver driver = null;
 	public static final String url = "https://test.salesforce.com/";
@@ -39,21 +42,12 @@ public class StartUp {
 	        DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();  
 	        ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	        WebDriver driver = new InternetExplorerDriver(ieCapabilities);
-
-		
-		
-	 * 
 		*/
-		
-		
-		
-		
-		
 		//System.setProperty("webdriver.ie.driver", "c://IEDriverServer.exe");
         //driver=new InternetExplorerDriver(); 
 	
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\jakther\\Desktop\\jahed\\java\\chromedriver\\chromedriver.exe");
 		extent.init(reportLocation + "Salesforce.html", true,
 				DisplayOrder.BY_OLDEST_TO_LATEST, GridType.STANDARD);
 		extent.config().documentTitle("Salesforce Test report");
@@ -64,8 +58,9 @@ public class StartUp {
 				.reportHeadline(
 						"<b>Salesforce Selenium Automation Test Report.Develop By:JAHED AKTHER</b>");
 		extent.startTest("TC01.1", "Open The Browser");
-		  driver = new ChromeDriver();  
-		//driver = new FirefoxDriver();
+		//  driver = new ChromeDriver();  
+		
+		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.navigate().to(url);
 		

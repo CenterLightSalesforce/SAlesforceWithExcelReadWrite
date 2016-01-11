@@ -5,6 +5,7 @@
     <classes>
       <class name="testCase.TestCaseForLogin"/>
       <class name="testCase.IntegrateMemberAcWithLogin"/>
+      <class name="testCase.TestCaseForCreateIndiviualProviderAc"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
