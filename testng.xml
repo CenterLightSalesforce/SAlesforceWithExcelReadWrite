@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
       <class name="testCase.TestCaseForLogin"/>
-      <class name="testCase.IntegrateMemberAcWithLogin"/>
+      <class name="testCase.TestCaseForCreateMemberAcWithLogin"/>
       <class name="testCase.TestCaseForCreateIndiviualProviderAc"/> 
     </classes>
   </test> <!-- Test -->

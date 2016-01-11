@@ -14,7 +14,7 @@ import utilities.AllMethod;
 import utilities.ScreenShot;
 import utilities.StartUp;
 
-public class IntegrateMemberAcWithLogin extends StartUp{
+public class TestCaseForCreateMemberAcWithLogin extends StartUp{
 	
 	//SignInPage sign=new SignInPage(driver);
 	
