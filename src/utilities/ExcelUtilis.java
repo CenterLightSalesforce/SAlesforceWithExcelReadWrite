@@ -25,12 +25,9 @@ public class ExcelUtilis {
 	public WebDriver driver;
 	
 	
-	
 	public ExcelUtilis(WebDriver driver){
 		this.driver=driver;
-		
-		
-	}
+		}
 	// This method is to set the File path and to open the Excel file, Pass
 	// Excel Path and Sheetname as Arguments to this method
 
