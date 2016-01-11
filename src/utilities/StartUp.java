@@ -53,7 +53,7 @@ public class StartUp {
 		extent.config().documentTitle("Salesforce Test report");
 		extent.config()
 				.reportTitle(
-						"<h1><font color='#000099'>Salesforce Automation Test Result</font></h1> <h4>1.Verify LogIn Screen(Positive,Negetive)</h4><h4>\n2.Member Account(Positive,Negetive).</h4>");
+						"<h1><font color='#000099'>Salesforce Automation Test Result</font></h1> <h4>1.Verify LogIn Screen(Positive,Negetive)</h4><h4>\n2.Member Account(Positive,Negetive).</h4><h4>\n2.Individual Provider Account(Positive,Negetive).</h4>");
 		extent.config()
 				.reportHeadline(
 						"<b>Salesforce Selenium Automation Test Report.Develop By:JAHED AKTHER</b>");
